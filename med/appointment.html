@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центр Семейной Медицины | Запись на прием</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="appointment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="specialists.html">Специалисты</a></li>
+                    <li><a href="appointment.html">Запись на прием</a></li>
+                    <li><a href="login.html">Вход</a></li>
+                </ul>
+            </nav>
+            <div class="header-contacts">
+                <div class="phone">
+                    <i class="fas fa-phone"></i>
+                    <span>+7 (8422) 33-55-50</span>
+                </div>
+                <div class="work-hours">
+                    <i class="far fa-clock"></i>
+                    <span>г. Ульяновск, Пензенский бульвар, д. 22</span>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="appointment-page">
+        <div class="container">
+            <h1>Запись на прием</h1>
+            
+            <div class="appointment-steps">
+                <div class="step active" data-step="1">
+                    <span>1</span>
+                    <p>Выбор специалиста</p>
+                </div>
+                <div class="step" data-step="2">
+                    <span>2</span>
+                    <p>Выбор даты и времени</p>
+                </div>
+                <div class="step" data-step="3">
+                    <span>3</span>
+                    <p>Подтверждение</p>
+                </div>
+            </div>
+            
+            <form id="appointmentForm" action="appointment.php" method="POST">
+                <!-- Шаг 1: Выбор специалиста -->
+                <div class="appointment-step" id="step1">
+                    <h2>Выберите специалиста</h2>
+                    <div class="form-group">
+                        <label for="department">Отделение:</label>
+                        <select id="department" name="department" required>
+                            <option value="">-- Выберите отделение --</option>
+                            <option value="therapy">Терапия</option>
+                            <option value="cardiology">Кардиология</option>
+                            <option value="neurology">Неврология</option>
+                            <option value="surgery">Хирургия</option>
+                            <option value="surgery">Гематология</option>
+                            <option value="surgery">Пульмонология</option>
+                            <option value="surgery">Ревматология</option>
+                            <option value="surgery">Эндокринология</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="specialist">Специалист:</label>
+                        <select id="specialist" name="specialist" required disabled>
+                            <option value="">-- Сначала выберите отделение --</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Услуга:</label>
+                        <select id="service" name="service" required disabled>
+                            <option value="">-- Сначала выберите специалиста --</option>
+                        </select>
+                    </div>
+                    <div class="step-buttons">
+                        <button type="button" class="btn btn-primary next-step" data-next="2">Далее</button>
+                    </div>
+                </div>
+                
+                <!-- Шаг 2: Выбор даты и времени -->
+                <div class="appointment-step hidden" id="step2">
+                    <h2>Выберите дату и время</h2>
+                    <div class="form-group">
+                        <label for="appointmentDate">Дата:</label>
+                        <input type="text" id="appointmentDate" name="appointmentDate" placeholder="Выберите дату" required readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentTime">Время:</label>
+                        <select id="appointmentTime" name="appointmentTime" required disabled>
+                            <option value="">-- Сначала выберите дату --</option>
+                        </select>
+                    </div>
+                    <div class="step-buttons">
+                        <button type="button" class="btn btn-secondary prev-step" data-prev="1">Назад</button>
+                        <button type="button" class="btn btn-primary next-step" data-next="3">Далее</button>
+                    </div>
+                </div>
+                
+                <!-- Шаг 3: Подтверждение -->
+                <div class="appointment-step hidden" id="step3">
+                    <h2>Подтвердите запись</h2>
+                   

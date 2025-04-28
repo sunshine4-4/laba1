@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центр Семейной Медицины | Наши услуги</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="specialists.html">Специалисты</a></li>
+                    <li><a href="appointment.html">Запись на прием</a></li>
+                    <li><a href="login.html">Вход</a></li>
+                </ul>
+            </nav>
+            <div class="header-contacts">
+                <div class="phone">
+                    <i class="fas fa-phone"></i>
+                    <span>+7 (8422) 33-55-50</span>
+                </div>
+                <div class="work-hours">
+                    <i class="far fa-clock"></i>
+                    <span>г. Ульяновск, Пензенский бульвар, д. 22</span>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="services-page">
+        <div class="container">
+            <h1>Наши услуги</h1>
+            
+            <div class="services-categories">
+                <button class="category-btn active" data-category="all">Все услуги</button>
+                <button class="category-btn" data-category="therapy">Компьютерная томография</button>
+                <button class="category-btn" data-category="pediatrics">Магнитно-резонансная томография</button>
+                <button class="category-btn" data-category="cardiology">Ультразвуковое исследование</button>
+                <button class="category-btn" data-category="neurology">Сдача анализов</button>
+                <button class="category-btn" data-category="surgery">Вызов врача на дом</button>
+            </div>
+
+            <section class="services">
+                <div class="container">
+                    <div class="service-category">
+                        <h2 class="service-category__title">Терапия</h2>
+                        <div class="service-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Услуга</th>
+                                        <th>Врач</th>
+                                        <th>Стоимость</th>
+                                        <th>Запись</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Первичный прием терапевта</td>
+                                        <td>Иванова А.П. (высшая категория)</td>
+                                        <td>2 500 ₽</td>
+                                        <td><button class="table-btn">Записаться</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Повторный прием терапевта</td>
+                                        <td>Иванова А.П. (высшая категория)</td>
+                                        <td>2 000 ₽</td>
+                                        <td><button class="table-btn">Записаться</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ЭКГ с расшифровкой</td>
+                                        <td>Петров С.И. (кардиолог)</td>
+                                        <td>1 700 ₽</td>
+                                        <td><button class="table-btn">Записаться</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Суточное мониторирование ЭКГ</td>
+                                        <td>Петров С.И. (кардиолог)</td>
+                                        <td>3 500 ₽</td>
+                                        <td><button class="table-btn">Записаться</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+        
+                    <!-- Педиатрия -->
+                    <div class="service-category">
+                        <h2 class="service-category__title">Педиатрия</h2>
+                        <div class="service-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Услуга</th>
+                                        <th>Врач</th>
+                                        <th>Стоимость</th>
+                                        <th>Запись</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Первичный прием педиатра</td>
+                                        <td>Сидорова Е.В. (детский врач)</td>
+                                        <td>2 800 ₽</td>
+                                        <td><button class="table-btn">Записаться</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Повторный прием педиатра</td>
+                                        <td>Сидорова Е.В. (детский врач)</td>
+                                        <td>2 300 ₽</td>
+                                        <td><button class="table-btn">Записаться</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Патронаж новорожденного</td>
+                                        <td>Козлова М.Н. (неонатолог)</td>
+                                        <td>3 500 ₽</td>
+                                        <td><button class="table-btn">Записаться</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Вакцинация (импортная вакцина)</td>
+                                        <td>Сидорова Е.В. (детский врач)</td>
+                                        <td>1 800 ₽</td>
+                                        <td><button class="table-btn">Записаться</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+        
+                    <!-- Диагностика -->
+                    <div class="service-category">
+                        <h2 class="service-category__title">Диагностика</h2>
+                        <div class="service-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Услуга</th>
+                                        <th>Специалист</th>
+                                        <th>Стоимость</th>
+                                        <th>Запись</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>УЗИ брюшной полости</td>
+                                        <td>Васильев Д.К. (УЗИ-специалист)</td>
+                                        <td>2 900 ₽</td>
+                                        <td><button class="table-btn">Записаться</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>УЗИ сердца</td>
+                                        <td>Васильев Д.К. (УЗИ-специалист)</td>
+                                        <td>3 200 ₽</td>
+                                        <td><button class="table-btn">Записаться</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Общий анализ крови</td>
+                                        <td>Лаборатория</td>
+                                        <td>800 ₽</td>
+                                        <td><button class="table-btn">Записаться</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Биохимический анализ крови</td>
+                                        <td>Лаборатория</td>
+                                        <td>1 500 ₽</td>
+                                        <td><button class="table-btn">Записаться</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+
+        </div>
+    </main>           
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Центр Семейной Медицины - Рентгенологические услуги в Ульяновске</p>
+                <a href="privacy.html">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="services.js"></script>
+</body>
+</html>

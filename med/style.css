@@ -1,0 +1,701 @@
+/* Общие стили и сброс */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #1861aa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: rgb(35, 142, 136);;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #287c66;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #f8f9fa;
+    color: rgb(35, 142, 136);
+    border: 1px solid rgb(35, 142, 136);
+}
+
+.btn-secondary:hover {
+    background-color: #e9ecef;
+}
+
+.btn-small {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+.btn-large {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: rgb(35, 142, 136);
+    position: relative;
+    text-align: center;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: rgb(35, 142, 136);
+    margin: 15px auto;
+}
+
+/* Шапка сайта */
+.header {
+    background-color: rgb(14, 104, 100);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: #ffffff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 25px;
+}
+
+.main-nav a {
+    font-weight: 500;
+    color: #ffffff;
+    position: relative;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+    color: #ffffff;
+}
+
+.main-nav a.active::after,
+.main-nav a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.header-contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-contacts div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.header-contacts i {
+    margin-right: 8px;
+    color: #ffffff;
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Подвал сайта */
+.footer {
+    background-color: rgb(10, 81, 77);
+    color: white;
+    padding: 40px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-about h3,
+.footer-links h3,
+.footer-contacts h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-about p {
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: rgb(35, 142, 136);
+    transform: translateY(-3px);
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+    color: rgb(35, 142, 136);
+}
+
+.footer-contacts p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contacts i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+    color: rgb(35, 142, 136);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #777;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-footer {
+    padding: 15px 30px;
+    border-top: 1px solid #eee;
+    text-align: right;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .main-nav {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .header-contacts {
+        display: none;
+    }
+    
+    .header .container {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-bottom p {
+        margin-bottom: 10px;
+    }
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.advantage-card,
+.service-card,
+.specialist-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.advantage-card.animate,
+.service-card.animate,
+.specialist-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Задержки для анимации */
+.advantage-card:nth-child(1) { transition-delay: 0.1s; }
+.advantage-card:nth-child(2) { transition-delay: 0.2s; }
+.advantage-card:nth-child(3) { transition-delay: 0.3s; }
+.advantage-card:nth-child(4) { transition-delay: 0.4s; }
+
+.service-card:nth-child(1) { transition-delay: 0.1s; }
+.service-card:nth-child(2) { transition-delay: 0.2s; }
+.service-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* Уведомления */
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: white;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.alert.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.alert-success {
+    background-color: #28a745;
+}
+
+.alert-error {
+    background-color: #dc3545;
+}
+
+/* Активное состояние слайдера */
+.specialists-slider.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+
+/* Стили для страницы специалистов */
+.specialists-page {
+    padding: 100px 0 60px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.specialists-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: #2a7fba;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 127, 186, 0.2);
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    color: #777;
+}
+
+.department-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.department-filter label {
+    font-weight: 500;
+    color: #555;
+}
+
+.department-filter select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.department-filter select:focus {
+    border-color: #2a7fba;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 127, 186, 0.2);
+}
+
+.department-section {
+    margin-bottom: 40px;
+}
+
+.department-title {
+    color: #2a7fba;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0f0fa;
+}
+
+.specialists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.specialist-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.specialist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.specialist-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.specialist-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.specialist-card:hover .specialist-image img {
+    transform: scale(1.05);
+}
+
+.specialist-info {
+    padding: 20px;
+}
+
+.specialist-info h3 {
+    margin-bottom: 10px;
+    color: #2a7fba;
+}
+
+.specialist-info p {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.specialist-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.specialist-actions .btn {
+    flex: 1;
+}
+
+/* Модальное окно специалиста */
+.modal .specialist-details {
+    display: flex;
+    gap: 30px;
+}
+
+.modal .specialist-image {
+    width: 200px;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.modal .specialist-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal .specialist-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2a7fba;
+}
+
+.modal .specialty {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.modal .department {
+    display: inline-block;
+    background-color: #f0f7fc;
+    color: #2a7fba;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.modal .experience,
+.modal .education,
+.modal .schedule {
+    margin-bottom: 12px;
+    color: #444;
+}
+
+.modal .bio {
+    margin-top: 20px;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Сообщения */
+.loading,
+.no-results,
+.error {
+    text-align: center;
+    padding: 40px;
+    grid-column: 1 / -1;
+    color: #666;
+}
+
+.loading .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f0f0f0;
+    border-top: 5px solid #2a7fba;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.no-results i,
+.error i {
+    font-size: 3rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.error i {
+    color: #dc3545;
+}
+
+.error p {
+    margin-bottom: 20px;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .specialists-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .specialists-filters {
+        flex-direction: column;
+    }
+    
+    .search-box,
+    .department-filter {
+        width: 100%;
+    }
+    
+    .modal .specialist-details {
+        flex-direction: column;
+    }
+    
+    .modal .specialist-image {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .specialists-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .specialist-actions {
+        flex-direction: column;
+    }
+    
+    .specialist-actions .btn {
+        width: 100%;
+    }
+}

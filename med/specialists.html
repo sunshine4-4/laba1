@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центр Семейной Медицины | Наши специалисты</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="specialists.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="specialists.html">Специалисты</a></li>
+                    <li><a href="appointment.html">Запись на прием</a></li>
+                    <li><a href="login.html">Вход</a></li>
+                </ul>
+            </nav>
+            <div class="header-contacts">
+                <div class="phone">
+                    <i class="fas fa-phone"></i>
+                    <span>+7 (8422) 33-55-50</span>
+                </div>
+                <div class="work-hours">
+                    <i class="far fa-clock"></i>
+                    <span>г. Ульяновск, Пензенский бульвар, д. 22</span>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        </header>   
+
+    <!-- Основное содержимое -->
+    <main class="specialists-page">
+        <div class="container">
+            <h1>Наши специалисты</h1>
+            
+            <div class="specialists-filters">
+                <div class="search-box">
+                    <input type="text" id="searchSpecialist" placeholder="Поиск по имени или специальности...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="department-filter">
+                    <label for="department">Отделение:</label>
+                    <select id="department">
+                        <option value="all">Все отделения</option>
+                        <option value="therapy">Терапия</option>
+                        <option value="cardiology">Кардиология</option>
+                        <option value="neurology">Неврология</option>
+                        <option value="surgery">Гематология</option>
+                        <option value="surgery">Пульмонология</option>
+                        <option value="surgery">Ревматология</option>
+                        <option value="surgery">Эндокринология</option>
+                    </select>
+                </div>
+            </div>
+
+            <section class="specialists">
+                <div class="container">
+                    <div class="specialists-grid">
+                        <!-- Карточка специалиста 1 -->
+                        <div class="specialist-card">
+                            <div class="specialist-photo">
+                                <img src="img/makeeva2.jpg" alt="Иванова А.П.">
+                                <div class="specialist-exp">22 года опыта</div>
+                            </div>
+                            <div class="specialist-info">
+                                <h3 class="specialist-name">Иванова Анна Петровна</h3>
+                                <div class="specialist-position">Главный врач, терапевт</div>
+                                <div class="specialist-badges">
+                                    <span class="badge">Высшая категория</span>
+                                    <span class="badge">К.м.н.</span>
+                                </div>
+                                <p class="specialist-desc">Специализируется на лечении сердечно-сосудистых заболеваний и профилактической медицине.</p>
+                                <div class="specialist-contacts">
+                                    <a href="tel:+78001234567" class="contact-link"><i class="fas fa-phone"></i></a>
+                                    <a href="mailto:ivanova@familymed.ru" class="contact-link"><i class="fas fa-envelope"></i></a>
+                                    <button class="details-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Карточка специалиста 2 -->
+                        <div class="specialist-card">
+                            <div class="specialist-photo">
+                                <img src="img/isaev.jpg" alt="Петров С.И.">
+                                <div class="specialist-exp">18 лет опыта</div>
+                            </div>
+                            <div class="specialist-info">
+                                <h3 class="specialist-name">Петров Сергей Иванович</h3>
+                                <div class="specialist-position">Кардиолог, зав. отделением</div>
+                                <div class="specialist-badges">
+                                    <span class="badge">Высшая категория</span>
+                                    <span class="badge">Д.м.н.</span>
+                                </div>
+                                <p class="specialist-desc">Эксперт в области диагностики и лечения ишемической болезни сердца и аритмий.</p>
+                                <div class="specialist-contacts">
+                                    <a href="tel:+78001234568" class="contact-link"><i class="fas fa-phone"></i></a>
+                                    <a href="mailto:petrov@familymed.ru" class="contact-link"><i class="fas fa-envelope"></i></a>
+                                    <button class="details-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Карточка специалиста 3 -->
+                        <div class="specialist-card">
+                            <div class="specialist-photo">
+                                <img src="img/sergeeva.jpg" alt="Сидорова Е.В.">
+                                <div class="specialist-exp">15 лет опыта</div>
+                            </div>
+                            <div class="specialist-info">
+                                <h3 class="specialist-name">Сидорова Елена Владимировна</h3>
+                                <div class="specialist-position">Педиатр</div>
+                                <div class="specialist-badges">
+                                    <span class="badge">Первая категория</span>
+                                </div>
+                                <p class="specialist-desc">Специалист по детским болезням, вакцинопрофилактике и наблюдению за развитием ребенка.</p>
+                                <div class="specialist-contacts">
+                                    <a href="tel:+78001234569" class="contact-link"><i class="fas fa-phone"></i></a>
+                                    <a href="mailto:sidorova@familymed.ru" class="contact-link"><i class="fas fa-envelope"></i></a>
+                                    <button class="details-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Карточка специалиста 4 -->
+                        <div class="specialist-card">
+                            <div class="specialist-photo">
+                                <img src="img/f90efc615608722471323ba99b32e7d6-csmvr4.jpg" alt="Козлова М.Н.">
+                                <div class="specialist-exp">12 лет опыта</div>
+                            </div>
+                            <div class="specialist-info">
+                                <h3 class="specialist-name">Козлова Мария Николаевна</h3>
+                                <div class="specialist-position">Неонатолог</div>
+                                <div class="specialist-badges">
+                                    <span class="badge">Вторая категория</span>
+                                </div>
+                                <p class="specialist-desc">Специалист по выхаживанию новорожденных, патронажу и грудному вскармливанию.</p>
+                                <div class="specialist-contacts">
+                                    <a href="tel:+78001234570" class="contact-link"><i class="fas fa-phone"></i></a>
+                                    <a href="mailto:kozlova@familymed.ru" class="contact-link"><i class="fas fa-envelope"></i></a>
+                                    <button class="details-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Карточка специалиста 5 -->
+                        <div class="specialist-card">
+                            <div class="specialist-photo">
+                                <img src="img/myg.jpg" alt="Васильев Д.К.">
+                                <div class="specialist-exp">10 лет опыта</div>
+                            </div>
+                            <div class="specialist-info">
+                                <h3 class="specialist-name">Васильев Дмитрий Константинович</h3>
+                                <div class="specialist-position">Врач УЗИ</div>
+                                <div class="specialist-badges">
+                                    <span class="badge">Первая категория</span>
+                                </div>
+                                <p class="specialist-desc">Специалист по ультразвуковой диагностике органов брюшной полости, сердца и сосудов.</p>
+                                <div class="specialist-contacts">
+                                    <a href="tel:+78001234571" class="contact-link"><i class="fas fa-phone"></i></a>
+                                    <a href="mailto:vasilev@familymed.ru" class="contact-link"><i class="fas fa-envelope"></i></a>
+                                    <button class="details-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    <!-- Карточка специалиста 6 -->
+                        <div class="specialist-card">
+                            <div class="specialist-photo">
+                                <img src="img/g.jpg" alt="Смирнова О.И.">
+                                <div class="specialist-exp">14 лет опыта</div>
+                            </div>
+                            <div class="specialist-info">
+                                <h3 class="specialist-name">Смирнова Ольга Игоревна</h3>
+                                <div class="specialist-position">Невролог</div>
+                                <div class="specialist-badges">
+                                    <span class="badge">Высшая категория</span>
+                                    <span class="badge">К.м.н.</span>
+                                </div>
+                                <p class="specialist-desc">Специалист по заболеваниям нервной системы, головным болям и реабилитации после инсультов.</p>
+                                <div class="specialist-contacts">
+                                    <a href="tel:+78001234572" class="contact-link"><i class="fas fa-phone"></i></a>
+                                    <a href="mailto:smirnova@familymed.ru" class="contact-link"><i class="fas fa-envelope"></i></a>
+                                    <button class="details-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Центр Семейной Медицины - Рентгенологические услуги в Ульяновске</p>
+                <a href="privacy.html">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно специалиста -->
+    <div class="modal" id="specialistModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="modalSpecialistInfo">
+                <!-- Информация о специалисте будет загружена здесь -->
+            </div>
+            <div class="modal-footer">
+                <a href="appointment.html" class="btn btn-primary">Записаться на прием</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="specialists.js"></script>
+</body>
+</html>
